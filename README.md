@@ -1,12 +1,12 @@
 # mastodon-soft
-It's the default Mastodon Dark theme, but with a softer textbox both for posting and for alt img captioning.
+It's the default Mastodon Dark theme, but with a softer textbox both for posting and for alt image captioning.
 
 ## Screenshots
 ![A screen capture of where you'd type your toot to post](img/tootbox.png)
 ![A screen capture of where you'd put alt text in](img/alttxt.png)
 
 ## Installing
-I'm using `$MASTODON_ROOT` to describe the install dir. It might be `/home/mastodon/live` if you followed the initial instructions.
+I'm using `$MASTODON_ROOT` to describe the path to the Mastodon install dir. It might be `/home/mastodon/live` if you used the [installing from source](https://docs.joinmastodon.org/admin/install) instructions.
 
 1. Copy `theme/mastodon-soft/` and `theme/mastodon-soft.scss` to `$MASTODON_ROOT/app/javascript/styles`
 2. Define the style in `$MASTODON_ROOT/config/themes.yml`:
@@ -25,13 +25,12 @@ I'm using `$MASTODON_ROOT` to describe the install dir. It might be `/home/masto
 4. Build the assets: `RAILS_ENV=production bundle exec rails assets:precompile`
 5. Restart: `sudo systemctl restart mastodon-web`
 
-After that you can go to your appearance preferences in the Web UI (`/settings/preferences/appearance`) and select "Mastodon (Dark, Soft)" and you're good to go.
+After that you can go to your appearance preferences in the Web UI (`/settings/preferences/appearance`), select "Mastodon (Dark, Soft)" and browse back to the main page.
 
 ## Known Issues
 * Theres some odds and ends that dont match the theme (got a little fancy with `.emoji-mart-bar`), and probably other things I missed.
-* The moderation interface is admittedly not very soft.
-
-Contributions are welcome!
+* :warning: Not Soft: The moderation interface is not very soft. 
+* Probably other things? If you find them and get inspired, contributions are welcome.
 
 # License
 mastodon-soft: a softer theme for Mastodon\
